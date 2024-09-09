@@ -3,6 +3,9 @@
         <App v-if="props.type == 'app'">
             <slot />
         </App>
+        <Auth v-if="props.type == 'auth'">
+            <slot />
+        </Auth>
         
         
     </div>
@@ -11,6 +14,8 @@
 <script setup lang='js'>
 
 import App from "@/layouts/App.vue";
+import Auth from "@/layouts/Auth.vue";
+
 import { onMounted } from "vue";
 
 const props = defineProps({
