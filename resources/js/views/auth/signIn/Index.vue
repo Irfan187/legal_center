@@ -5,7 +5,7 @@
             <b-col md="10" class="signin-col">
                 <b-card class="border-none">
 
-                    <h3 class="">Sign In</h3>
+                    <h3 class="text-center">Sign In</h3>
 
 
                     <form ref="loginForm" class="needs-validation row" novalidate>

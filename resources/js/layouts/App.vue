@@ -28,7 +28,7 @@
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 
-
+import Footer from "@/components/Footer.vue";
 
 const router = useRouter();
 

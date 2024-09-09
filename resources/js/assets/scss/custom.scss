@@ -43,7 +43,8 @@
     --placeholder-color: #667085;
     --icon-color: #1d2939;
     --text-color: #344054;
-    --primary-color: #b3d64e;
+    // --primary-color: #073a65;
+    --primary-color:#2a6ea6;
     --white-color: #ffffff;
     --header-menu-link-color: #344054;
     --hero-bg-color: #101828;
@@ -68,7 +69,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     // background-color: var(--body-color);
     color: var(--text-color);
@@ -447,6 +448,7 @@ input.form-control.password-input {
 
 .no-underline {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 .underline {
@@ -1586,7 +1588,7 @@ $fontColor: rgb(250, 250, 250);
             }
 
             label {
-                font-size: 14px;
+                font-size: 16px;
                 color: #101828;
                 font-weight: 500;
                 line-height: 130%;
@@ -1595,10 +1597,10 @@ $fontColor: rgb(250, 250, 250);
 
             .form-control {
                 border: 1px solid #D0D5DD;
-                padding: 19px 18px 19px 50px;
-                font-size: 14px;
+                padding: 15px 18px 17px 50px;
+                font-size: 16px;
                 font-weight: 400;
-                border-radius: 0px;
+                border-radius: 5px;
 
                 ::placeholder {
                     color: #667085;
@@ -1607,7 +1609,7 @@ $fontColor: rgb(250, 250, 250);
 
             .form-icon {
                 position: absolute;
-                bottom: 21px;
+                bottom: 19px;
                 left: 17px;
             }
 
@@ -1624,9 +1626,11 @@ $fontColor: rgb(250, 250, 250);
 
             .login-btn {
                 border-radius: 0px;
-                background-color: #11548d;
+                background-color: var(--primary-color);
                 font-size: 16px;
                 padding: 12px;
+                font-weight: 900;
+                border: none;
             }
         }
 
@@ -1636,14 +1640,20 @@ $fontColor: rgb(250, 250, 250);
 .social-btn-col {
     .signin-other-title {
         h5 {
-            font-size: 12px;
+            font-size: 16px;
             color: #667085;
             margin-bottom: 18px;
         }
     }
 
     .signin-google-btn {
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
+    }
+
+    .signin-google-btn {
+        &:hover {
+            border: 2px solid var(--primary-color);
+        }
     }
 
     .btn {
@@ -1733,7 +1743,7 @@ $fontColor: rgb(250, 250, 250);
             }
 
             label {
-                font-size: 14px;
+                font-size: 16px;
                 color: #101828;
                 font-weight: 500;
                 line-height: 130%;
@@ -1742,10 +1752,10 @@ $fontColor: rgb(250, 250, 250);
 
             .form-control {
                 border: 1px solid #D0D5DD;
-                padding: 19px 18px 19px 50px;
-                font-size: 14px;
+                padding: 15px 18px 17px 50px;
+                font-size: 16px;
                 font-weight: 400;
-                border-radius: 0px;
+                border-radius: 5px;
 
                 ::placeholder {
                     color: #667085;
@@ -1771,7 +1781,7 @@ $fontColor: rgb(250, 250, 250);
 
             .login-btn {
                 border-radius: 0px;
-                background-color: #11548d;
+                background-color: var(--primary-color);
                 font-size: 16px;
                 padding: 12px;
             }

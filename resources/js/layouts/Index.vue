@@ -6,7 +6,9 @@
         <Auth v-if="props.type == 'auth'">
             <slot />
         </Auth>
-        
+        <Full v-if="props.type == 'full'" :main_class="props.class" :footer-Type="props.footer">
+            <slot />
+        </Full>
         
     </div>
 </template>
@@ -15,6 +17,7 @@
 
 import App from "@/layouts/App.vue";
 import Auth from "@/layouts/Auth.vue";
+import Full from "@/layouts/Full.vue";
 
 import { onMounted } from "vue";
 
