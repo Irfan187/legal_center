@@ -1,4 +1,3 @@
-import { User } from '@/utils/types';
 import { defineStore } from 'pinia';
 import apiClient from '@/utils/axios';
 // import { useHttpErrorManager } from '@/composables/useHttpErrorManager';
@@ -38,6 +37,7 @@ export const useAuthStore = defineStore('authStore', {
         },
         async loadUser(force = false) {
             try {
+                console.log('22');
                 const response = await apiClient.get('auth/user');
                 
                 this.user = response.data.user;
@@ -58,6 +58,8 @@ export const useAuthStore = defineStore('authStore', {
                 return true;
             } 
             catch (error) {
+                console.log('26');
+
                 // let errorObj = await useHttpErrorManager().handleError(error, false);
                 if (this.isLoggedIn) {
                     await this.processLogout();

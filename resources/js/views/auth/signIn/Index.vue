@@ -1,8 +1,8 @@
 <template>
-    <Layout>
+    <Layout type="auth">
         <b-row>
-            <b-col>
-                jhghjgjgjhg
+            <b-col class="col-10">
+                Login Page
             </b-col>
         </b-row>
     </Layout>
