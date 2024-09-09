@@ -3,7 +3,9 @@ import { useAuthStore } from '@/stores/auth-store';
 // Import Bootstrap and Bootstrap-Vue-Next CSS
 
 const dashboard = () => import("@/views/dashboard.vue");
-const Login = () => import("@/views/auth/signIn/Index.vue");
+const Login = () => import("@/views/auth/signin/Index.vue");
+const Register = () => import("@/views/auth/signup/Index.vue");
+
 
 
 const routes = [
@@ -23,6 +25,16 @@ const routes = [
         component: Login,
         meta: {
             title: `Login`,
+            authRequired: false,
+            isAuthLayout: true,
+        },
+    },
+    {
+        name: "register",
+        path: "/register",
+        component: Register,
+        meta: {
+            title: `Register`,
             authRequired: false,
             isAuthLayout: true,
         },
