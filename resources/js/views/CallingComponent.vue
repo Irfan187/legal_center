@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-5">
         <h1>Legal Center</h1>
-       
+        <button @click="test">Test</button>
         
     </div>
 
@@ -11,6 +11,9 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
+const test = () => {
+    alert('hgdshjhdgjsgdj');
+}
 
 </script>
 
