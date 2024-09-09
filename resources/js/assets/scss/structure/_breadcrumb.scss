@@ -1,0 +1,22 @@
+.breadcrumb-separator{
+    padding-inline: 0.5rem;
+}
+
+.breadcrumb-item {
+    a {
+        color: $text-muted;
+        text-decoration: none;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+    }
+    &.active {
+        a {
+            color: $dark;
+        }
+        
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $text-muted;
+}
