@@ -1,10 +1,8 @@
 <template>
     <div id="layout-wrapper">
-
+        <TopbarFull />
         <div>
             <div class="app-menu navbar-menu mt-3">
-
-
                 <div class="sidebar-background"></div>
             </div>
             <div class="vertical-overlay" id="overlay"></div>
@@ -28,7 +26,8 @@
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 
-import Footer from "@/components/Footer.vue";
+import TopbarFull from "@/components/TopbarFull.vue";
+
 
 const router = useRouter();
 

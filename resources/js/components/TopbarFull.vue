@@ -67,7 +67,7 @@
                                                 d="M15.7889 13.8475L19.358 17.4159L18.1789 18.595L14.6105 15.0259C13.2828 16.0902 11.6314 16.6691 9.92969 16.6667C5.78969 16.6667 2.42969 13.3067 2.42969 9.16669C2.42969 5.02669 5.78969 1.66669 9.92969 1.66669C14.0697 1.66669 17.4297 5.02669 17.4297 9.16669C17.4321 10.8684 16.8532 12.5198 15.7889 13.8475ZM14.1172 13.2292C15.1748 12.1416 15.7654 10.6837 15.763 9.16669C15.763 5.94335 13.1522 3.33335 9.92969 3.33335C6.70635 3.33335 4.09635 5.94335 4.09635 9.16669C4.09635 12.3892 6.70635 15 9.92969 15C11.4467 15.0024 12.9046 14.4118 13.9922 13.3542L14.1172 13.2292Z" />
                                         </svg>
                                     </span>
-                                    <input type="text" placeholder="What position are you looking for?" id="search_val"
+                                    <input type="text" placeholder="Search Lawyers" id="search_val"
                                         :value="route.query.search" @keyup.enter="findJobs()">
 
                                     <button @click="reset_search()" class="reset_search"><i
@@ -100,6 +100,9 @@
                                 </svg>
                                 <span class=" create_account">Log in</span>
                             </router-link>
+                            <b-button class="logout-button" @click="logoutAction" v-else>
+                                Logout
+                            </b-button>
                         </div>
                     </div>
                 </div>
@@ -122,11 +125,24 @@ const auth = useAuthStore();
 const route = useRoute();
 // console.log(auth.loadUser())
 
-
+const logoutAction = () => {
+    auth.processLogout();
+}
 
 </script>
 
 <style>
+.logout-button{
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+}
+
+.logout-button:hover{
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+}
 .logo-lg{
     color: var(--primary-color);
 }
