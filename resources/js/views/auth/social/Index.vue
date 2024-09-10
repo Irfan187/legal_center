@@ -39,8 +39,6 @@
             </button> -->
     </div>
 </template>
-<<<<<<< HEAD
-=======
 
 <style scoped>
 
@@ -49,4 +47,3 @@
     border-radius: 5px;
 }
 </style>
->>>>>>> 80b3b9fcc946374fbd0ac28be5e2e5aa84d44d97
