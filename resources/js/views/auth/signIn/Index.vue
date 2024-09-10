@@ -138,48 +138,6 @@ const togglePassword = () => {
     showPassword.value = !showPassword.value;
 }
 
-// const submitLoginForm = () => {
-//     formManager.validate(loginForm.value, formErrors)
-//         .then(async (data) => {
-//             // return;
-//             formErrors.value = {};
-//             show_overlay.value = true;
-//             await apiClient.get('/sanctum/csrf-cookie').then(async (csrfResponse) => {
-//                 await apiClient.post('auth/login', data)
-//                     .then(async (response) => {
-                        
-//                         await authStore.loadUser();
-//                         show_overlay.value = false;
-//                         let returnTo = route.query?.returnTo;
-//                         let paramsTo = route.query?.params;
-//                         if (paramsTo) {
-//                             paramsTo = JSON.parse(paramsTo);
-//                         }
-//                         console.log(returnTo);
-//                         if (returnTo) {
-//                             if (paramsTo) {
-//                                 await router.push({ name: returnTo, params: paramsTo });
-//                             }
-//                             else {
-//                                 await router.push({ name: returnTo });
-//                             }
-//                         }
-//                         else {
-//                             await router.push({ name: 'dashboard' });
-//                         }
-//                     })
-//                     .catch(async (error) => {
-//                         formErrors.value = await useHttpErrorManager().handleError(error, true);
-//                         formManager.displayServerSideFormErrors(loginForm.value, formErrors.value);
-//                         show_overlay.value = false;
-//                     });
-//             });
-
-
-//         }).catch((errors) => {
-//             console.log(errors);
-//         });
-// }
 
 const submitLoginForm = async () => {
     try {
