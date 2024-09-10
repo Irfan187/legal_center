@@ -1,5 +1,6 @@
 export function useAppHelpers() {
     const togglePassword = (element) => {
+        alert(element);
         if (element) {
             element.onclick = () => {
                 var passwordInputs =

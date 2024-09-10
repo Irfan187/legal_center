@@ -12,7 +12,8 @@
         "unplugin-vue-components": "^0.25.2",
         "vite": "^4.0.0",
         "vue": "^3.3.4",
-        "sass": "^1.69.5"
+        "sass": "^1.69.5",
+        "@iconify/vue": "^4.1.1"
     },
     "dependencies": {
         "bootstrap-vue-next": "^0.14.10",

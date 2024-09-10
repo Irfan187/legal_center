@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('service_id')->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('lawyer_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('request_id');
-            $table->foreign('request_id')->references('id')->on('requests')->constrained()->onDelete('cascade');
+            $table->foreign('request_id')->references('id')->on('case_requests')->constrained()->onDelete('cascade');
             $table->double('amount');
             $table->enum('status',['underprocess','disputed','closed','completed']);
             $table->unique(['lawyer_id', 'request_id']);

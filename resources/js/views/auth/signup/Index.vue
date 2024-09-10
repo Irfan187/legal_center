@@ -4,7 +4,7 @@
         <b-row class="justify-content-center">
             <b-col md="10" class="signup-col">
                 <b-card class="border-none">
-                    <h3 class="">Create an Account</h3>
+                    <h3 class="text-center">Create an Account</h3>
                     <!-- <p class="text-tertiary fs-14 fw-400">Let's Sign up first for enter into Mahara.</p> -->
 
                     <b-overlay variant="dark" :show="show_overlay">
@@ -15,8 +15,9 @@
                                     <div class="position-relative ">
                                         <label for="first_name" class="form-label">First Name</label>
                                         <input placeholder="Enter first name" tabindex="1" type="text"
-                                            data-validation="required" data-validation-name="First Name" name="first_name"
-                                            class="form-control form-field" id="first_name" :value.attr="''" required>
+                                            data-validation="required" data-validation-name="First Name"
+                                            name="first_name" class="form-control form-field" id="first_name"
+                                            :value.attr="''" required>
                                         <span class="form-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 viewBox="0 0 20 20" fill="none">
@@ -29,8 +30,8 @@
 
                                     <div v-if="formErrors.first_name"
                                         class="invalid-feedback d-flex align-items-center gap-1">
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -56,8 +57,8 @@
 
                                     <div v-if="formErrors.last_name"
                                         class="invalid-feedback d-flex align-items-center gap-1">
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -68,13 +69,17 @@
                                 <div class="col-sm-12 mb-18">
                                     <div class="phone-number-input">
                                         <label for="contact" class="form-label">Phone Number</label>
-                                        <vue-tel-input class="form-control" ref="phoneInput" v-model="phone" :dropdownOptions="{showFlags: true, showDialCodeInList: true, showSearchBox: true, tabindex: 3}" :inputOptions="{tabindex: 4, id: 'phone_number', name: 'phone_number', showDialCode: true, autocomplete: 'on', placeholder: 'Enter a phone number', type: 'tel', required: true}" data-validation="required|phone"
-                                        defaultCountry="pk" mode="international"></vue-tel-input>
+                                        <vue-tel-input class="form-control" ref="phoneInput" v-model="phone"
+                                            :dropdownOptions="{ showFlags: true, showDialCodeInList: true, showSearchBox: true, tabindex: 3 }"
+                                            :inputOptions="{ tabindex: 4, id: 'phone_number', name: 'phone_number', showDialCode: true, autocomplete: 'on', placeholder: 'Enter a phone number', type: 'tel', required: true }"
+                                            data-validation="required|phone" defaultCountry="pk"
+                                            mode="international"></vue-tel-input>
                                     </div>
-                                    <div v-if="contactCheck == 1" class="invalid-feedback d-flex align-items-center gap-1">
+                                    <div v-if="contactCheck == 1"
+                                        class="invalid-feedback d-flex align-items-center gap-1">
 
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -86,8 +91,9 @@
                                     <div class="position-relative ">
                                         <label for="email" class="form-label">Email</label>
                                         <input tabindex="5" type="email" placeholder="Enter your email address"
-                                            data-validation="required|email" name="email" class="form-control form-field"
-                                            id="email" required autocomplete="username" :value.attr="''">
+                                            data-validation="required|email" name="email"
+                                            class="form-control form-field" id="email" required autocomplete="username"
+                                            :value.attr="''">
 
                                         <span class="form-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -98,9 +104,10 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <div v-if="formErrors.email" class="invalid-feedback d-flex align-items-center gap-1">
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                    <div v-if="formErrors.email"
+                                        class="invalid-feedback d-flex align-items-center gap-1">
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -137,8 +144,8 @@
 
                                     <div v-if="formErrors.password"
                                         class="invalid-feedback d-flex align-items-center gap-1">
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -150,8 +157,8 @@
                                     <div class="position-relative">
                                         <label class="form-label" for="password">Confirm Password</label>
                                         <input tabindex="7" placeholder="Confirm your password" ref="confirm_password"
-                                            data-validation="required|minLen:8" type="password" name="password_confirmation"
-                                            data-validation-name="Confirm Password"
+                                            data-validation="required|minLen:8" type="password"
+                                            name="password_confirmation" data-validation-name="Confirm Password"
                                             class="form-control pe-5 password-input form-field" onpaste="return false"
                                             id="password_confirmation" aria-describedby="passwordConfirmation"
                                             :value.attr="''" required autocomplete="new-password">
@@ -176,8 +183,8 @@
 
                                     <div v-if="formErrors.password"
                                         class="invalid-feedback d-flex align-items-center gap-1">
-                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24' height='24'
-                                            fill='none' stroke='#f06548'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='24'
+                                            height='24' fill='none' stroke='#f06548'>
                                             <circle cx='6' cy='6' r='4.5' />
                                             <path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z' />
                                             <circle cx='6' cy='8.2' r='.6' fill='#f06548' stroke='none' />
@@ -202,8 +209,9 @@
                                 </div> -->
 
                                 <div class="">
-                                    <b-button tabindex="8" @click="submitRegisterForm" size="lg" variant="primary"
-                                        class="w-100 login-btn text-white font-500 py-3" type="button">Sign up</b-button>
+                                    <b-button tabindex="8" size="lg" variant="primary"
+                                        class="w-100 login-btn text-white font-500 py-3" type="button">Sign
+                                        up</b-button>
                                 </div>
 
                                 <SocialLogin></SocialLogin>
@@ -214,7 +222,7 @@
                     </b-overlay>
 
                     <div class="mt-4 fw-500 text-center">
-                        <p class="mb-0 font-400" style="color: #475467;">Already have an account? <router-link
+                        <p class="mb-0 font-400 " style="color: #475467;">Already have an account? <router-link
                                 class="font-500 no-underline" :to="{ name: 'login' }">Sign In</router-link></p>
                     </div>
                 </b-card>
@@ -236,8 +244,13 @@ import SocialLogin from "@/views/auth/social/Index.vue";
 import { onMounted, ref, reactive, watch } from 'vue';
 import { VueTelInput } from 'vue-tel-input';
 import 'vue-tel-input/vue-tel-input.css';
+import { useAppHelpers } from "@/composables/useAppHelpers";
 
 let formErrors = ref({});
+const helper = useAppHelpers();
+const toggle_password_view = ref(null);
+const toggle_password_view_2 = ref(null);
+const show_overlay = ref(false);
 // const phoneInput = ref(0);
 // console.log(phoneInput.querySelector('input'));
 // Get the inner input element
@@ -246,7 +259,13 @@ let formErrors = ref({});
 // Now you can use inputElement as needed
 // console.log(inputElement);
 
-
+if (toggle_password_view.value) {
+    console.log('bhjhjhgjhg',toggle_password_view.value);
+    helper.togglePassword(toggle_password_view.value);
+}
+if (toggle_password_view_2.value) {
+    helper.togglePassword(toggle_password_view_2.value);
+}
 
 
 
@@ -255,7 +274,11 @@ let formErrors = ref({});
 
 
 <style scoped>
-    .signup-col{
-        width: 550px;
-    }
+.signup-col {
+    width: 550px;
+}
+
+.rounded{
+    border-radius: 5px;
+}
 </style>
