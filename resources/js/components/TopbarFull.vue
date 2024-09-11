@@ -1,6 +1,6 @@
 <template>
     <div class="header second-header-main">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 d-flex align-items-center">
                         <!-- Dark Logo-->

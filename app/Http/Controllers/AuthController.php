@@ -33,7 +33,7 @@ class AuthController extends Controller
         /** @var \App\Models\User */
         $user = auth('web')->user();
         $scopes = $user->getRoleNames();
-        $user_role = $scopes; 
+        $user_role = count($scopes) > 0 ? $scopes[0] : null; 
         $user['type'] = $user_role;
         return response()->json(['user' => $user, 'scopes' => $scopes], 200);
     }

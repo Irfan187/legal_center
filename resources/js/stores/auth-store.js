@@ -157,7 +157,6 @@ export const useAuthStore = defineStore('authStore', {
             }
             if(this.role){
                 let roleAccess = true;
-                
                 if(typeof role == 'string'){
                     if(this.role == 'admin'){
                         roleAccess = role == 'admin';
@@ -186,7 +185,10 @@ export const useAuthStore = defineStore('authStore', {
             else if (!route.meta.authRequired && !route.meta.isAuthLayout) {
                 return true;
             }
-            else if (route.meta.authRequired && hasRole && hasScope && this.isLoggedIn) {
+            // else if (route.meta.authRequired && hasRole && hasScope && this.isLoggedIn) {
+            //     return true;
+            // } old code with permissions
+            else if (route.meta.authRequired && hasRole && this.isLoggedIn) {
                 return true;
             }
             return false;

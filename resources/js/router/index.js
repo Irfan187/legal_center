@@ -5,6 +5,7 @@ import { useAuthStore } from '@/stores/auth-store';
 const dashboard = () => import("@/views/dashboard.vue");
 const Login = () => import("@/views/auth/signin/Index.vue");
 const Register = () => import("@/views/auth/signup/Index.vue");
+const DesignationList = () => import("@/views/designations/Index.vue");
 
 
 
@@ -48,6 +49,17 @@ const routes = [
             authRequired: false,
             isAuthLayout: true,
         },
+    },
+    {
+        name: "designation_list",
+        path: "/designations",
+        component: DesignationList,
+        meta: {
+            title: `EmployerList`,
+            authRequired: true,
+            isAuthLayout: false,
+            type: ['admin']
+        }
     },
 ];
 
