@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import apiClient from '@/utils/axios';
-// import { useHttpErrorManager } from '@/composables/useHttpErrorManager';
+import { useHttpErrorManager } from '@/composables/useHttpErrorManager';
 import router from '@/router';
-// import { useAppHelpers } from '@/composables/useAppHelpers';
+import { useAppHelpers } from '@/composables/useAppHelpers';
 // import { useLayoutStore } from "@/stores/layout-store";
 
 export const useAuthStore = defineStore('authStore', {
@@ -43,13 +43,14 @@ export const useAuthStore = defineStore('authStore', {
                 this.user = response.data.user;
                 this.scopes = response.data.scopes;
                 this.role = response.data.user.type;
+                console.log('288788',this.role);
         
                 if (this.isLoggedIn) {
-                    const responseSettings = await apiClient.get('user_setting/fetchTemplateSettings');
+                    // const responseSettings = await apiClient.get('user_setting/fetchTemplateSettings');
 
-                    const colorMode = responseSettings.data.dark_mode;
-                    const layoutMode = responseSettings.data.detach_layout;
-                    const sidebarSize = responseSettings.data.sidebar_size;
+                    // const colorMode = responseSettings.data.dark_mode;
+                    // const layoutMode = responseSettings.data.detach_layout;
+                    // const sidebarSize = responseSettings.data.sidebar_size;
         
                     // useLayoutStore().updateColorMode(colorMode === 1 ? 'dark' : 'light');
                     // useLayoutStore().updateLayoutMode(layoutMode === 1 ? 'detached' : 'default');
@@ -60,7 +61,7 @@ export const useAuthStore = defineStore('authStore', {
             catch (error) {
                 console.log('26');
 
-                // let errorObj = await useHttpErrorManager().handleError(error, false);
+                let errorObj = await useHttpErrorManager().handleError(error, false);
                 if (this.isLoggedIn) {
                     await this.processLogout();
                 } 
@@ -78,7 +79,7 @@ export const useAuthStore = defineStore('authStore', {
                 return true;
             } 
             catch (error) {
-                // let errorObj = await useHttpErrorManager().handleError(error, false);
+                let errorObj = await useHttpErrorManager().handleError(error, false);
                 if (this.isLoggedIn) {
                     await this.processLogout();
                 } 
@@ -94,11 +95,11 @@ export const useAuthStore = defineStore('authStore', {
                     this.user = null;
                     this.scopes = [];
                     this.role = null;
-                    window.location.href = '/auth/login';
+                    window.location.href = '/login';
                     // await router.push({ name: 'login' });
                 })
                 .catch((error) => {
-                    // useAppHelpers().deleteAllCookies('XSRF-TOKEN');
+                    useAppHelpers().deleteAllCookies('XSRF-TOKEN');
                 });
             if(this.isLoggedIn){
                 this.user = null;
@@ -156,10 +157,9 @@ export const useAuthStore = defineStore('authStore', {
             }
             if(this.role){
                 let roleAccess = true;
-                
                 if(typeof role == 'string'){
-                    if(this.role == 'admin' || this.role == 'manager'){
-                        roleAccess = role == 'manager';
+                    if(this.role == 'admin'){
+                        roleAccess = role == 'admin';
                     }
                     else{
                         roleAccess = this.role == role
@@ -185,7 +185,10 @@ export const useAuthStore = defineStore('authStore', {
             else if (!route.meta.authRequired && !route.meta.isAuthLayout) {
                 return true;
             }
-            else if (route.meta.authRequired && hasRole && hasScope && this.isLoggedIn) {
+            // else if (route.meta.authRequired && hasRole && hasScope && this.isLoggedIn) {
+            //     return true;
+            // } old code with permissions
+            else if (route.meta.authRequired && hasRole && this.isLoggedIn) {
                 return true;
             }
             return false;

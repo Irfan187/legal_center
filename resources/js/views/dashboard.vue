@@ -1,19 +1,16 @@
 <template>
-    <div class="container mt-5">
-        <h1>Legal Center</h1>
-        <button @click="test">Test</button>
-        
-    </div>
+    <Layout type="app">
+
+    </Layout>
 
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
+import Layout from "@/layouts/Index.vue";
 
-const test = () => {
-    alert('hgdshjhdgjsgdj');
-}
+
 
 </script>
 
@@ -23,3 +20,4 @@ const test = () => {
     margin-top: 50px;
 }
 </style>
+

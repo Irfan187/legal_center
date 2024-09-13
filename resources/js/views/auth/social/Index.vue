@@ -17,13 +17,8 @@
             </svg>
             Google
         </button>
-<<<<<<< HEAD
-
-        <button class="btn bg-white  py-3 fs-17 w-100 text-center mt-3" style="border: 1px solid var(--grey-40, #D0D5DD);"
-=======
       
         <button class="btn bg-white fs-17 w-50 text-center rounded signin-google-btn" 
->>>>>>> 80b3b9fcc946374fbd0ac28be5e2e5aa84d44d97
             @click="socialLogin('linkedin-openid')" title="Google" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
@@ -44,8 +39,6 @@
             </button> -->
     </div>
 </template>
-<<<<<<< HEAD
-=======
 
 <style scoped>
 
@@ -54,4 +47,3 @@
     border-radius: 5px;
 }
 </style>
->>>>>>> 80b3b9fcc946374fbd0ac28be5e2e5aa84d44d97

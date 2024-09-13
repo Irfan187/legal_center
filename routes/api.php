@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DesignationsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::group(['prefix' => 'auth', 'middleware' => ['web']], function () {
+    Route::post('login', [AuthController::class, 'login']);
+});
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::controller(AuthController::class)->prefix('auth')->group(function () {
+        Route::get('user', 'user');
+    });
+
+    Route::controller(AuthController::class)->prefix('auth')->group(function () {
+        Route::get('user', 'user');
+        Route::post('logout', 'logout');
+    });
+
+    Route::controller(DesignationsController::class)->prefix('designation')->group(function () {
+        Route::get('fetchDesignations', 'fetchDesignations');
+        Route::post('addDesignation', 'addDesignation');
+        Route::post('editDesignation/{designation}', 'editDesignation');
+        Route::post('deleteDesignation/{designation}', 'deleteDesignation');
+    });
 });

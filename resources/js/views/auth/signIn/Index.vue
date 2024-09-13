@@ -42,10 +42,10 @@
                             <div class="position-relative ">
                                 <label class="form-label" for="password" id="label-password">Password</label>
                                 <input @keydown.enter="submitLoginForm" placeholder="Enter your password" tabindex="2"
-                                    type="password" name="password" data-validation="required"
-                                    class="form-control password-input form-field" id="password"
-                                    autocomplete="current-password" aria-labelledby="label-password" :value.attr="''"
-                                    required>
+                                    :type="showPassword ? 'text' : 'password'" name="password"
+                                    data-validation="required" class="form-control password-input form-field"
+                                    id="password" autocomplete="current-password" aria-labelledby="label-password"
+                                    :value.attr="''" required>
 
                                 <span class="form-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
                                         viewBox="0 0 21 20" fill="none">
@@ -56,9 +56,11 @@
 
                                 <div class="auth-pass-inputgroup">
                                     <b-button variant="link" class="text-decoration-none text-medium-light p-0"
-                                        type="button" id="password-addon">
-                                        <i ref="toggle_password_view"
-                                            class="bx bx-show align-middle btn-spacing fw-400"></i>
+                                        @click="togglePassword" type="button">
+                                        <span class="icon is-small is-right">
+                                            <i class="bx"
+                                                :class="{ 'bx-hide': showPassword, 'bx-show': !showPassword }"></i>
+                                        </span>
                                     </b-button>
                                 </div>
                             </div>
@@ -116,13 +118,73 @@
 import { onMounted, ref, reactive, watch } from 'vue';
 import Layout from "@/layouts/Index.vue";
 import SocialLogin from "@/views/auth/social/Index.vue";
+import { useFormManager } from '@/composables/useFormManager';
+import { useAuthStore } from '@/stores/auth-store';
+import apiClient from '@/utils/axios';
+import { useHttpErrorManager } from '@/composables/useHttpErrorManager';
+import { useRoute, useRouter } from 'vue-router';
 
+const show_overlay = ref(false);
+const showPassword = ref(false);
+const formManager = useFormManager();
+
+const loginForm = ref(null);
 let formErrors = ref({});
+const authStore = useAuthStore();
+const router = useRouter();
+const route = useRoute();
+
+const togglePassword = () => {
+    showPassword.value = !showPassword.value;
+}
+
+
+const submitLoginForm = async () => {
+    try {
+        // Validate the form using formManager
+        await formManager.validate(loginForm.value, formErrors);
+        
+        formErrors.value = {};
+        show_overlay.value = true; // Show loading overlay
+        
+        // Fetch the CSRF cookie for security
+        await apiClient.get('/sanctum/csrf-cookie');
+        
+        // Submit the login data
+        const response = await apiClient.post('auth/login', loginForm.value);
+
+        // Load the authenticated user into the auth store
+        await authStore.loadUser();
+
+        // Turn off the loading overlay
+        show_overlay.value = false;
+
+        // Handle redirection after login
+        let returnTo = route.query?.returnTo;
+        let paramsTo = route.query?.params ? JSON.parse(route.query.params) : null;
+
+        if (returnTo) {
+            // If returnTo exists, redirect back to the intended route
+            await router.push({ name: returnTo, params: paramsTo || {} });
+        } else {
+            // Default redirection to the dashboard if no returnTo is provided
+            await router.push({ name: 'dashboard' });
+        }
+
+    } catch (error) {
+        // Handle validation errors or server errors
+        formErrors.value = await useHttpErrorManager().handleError(error, true);
+        formManager.displayServerSideFormErrors(loginForm.value, formErrors.value);
+        show_overlay.value = false; // Turn off the loading overlay
+        console.error("Login failed:", error); // Log the error for debugging
+    }
+};
+
 </script>
 
 
 <style scoped>
-    .signin-col{
-        width: 550px;
-    }
+.signin-col {
+    width: 550px;
+}
 </style>

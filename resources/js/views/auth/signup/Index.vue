@@ -119,7 +119,7 @@
                                     <div class="position-relative">
                                         <label class="form-label" for="password">Password</label>
                                         <input tabindex="6" ref="password" placeholder="Enter your password"
-                                            data-validation="required|minLen:8" type="password"
+                                            data-validation="required|minLen:8" :type="showPassword ? 'text' : 'password'"
                                             class="form-control pe-5 password-input form-field" onpaste="return false"
                                             id="password" name="password" aria-describedby="password" :value.attr="''"
                                             required autocomplete="new-password">
@@ -135,9 +135,11 @@
 
                                         <div class="auth-pass-inputgroup">
                                             <b-button variant="link" class="text-decoration-none text-medium-light p-0"
-                                                type="button">
-                                                <i ref="toggle_password_view"
-                                                    class="bx bx-show align-middle btn-spacing fw-400"></i>
+                                                @click="togglePassword" type="button">
+                                                <span class="icon is-small is-right">
+                                                    <i class="bx"
+                                                        :class="{ 'bx-hide': showPassword, 'bx-show': !showPassword }"></i>
+                                                </span>
                                             </b-button>
                                         </div>
                                     </div>
@@ -157,7 +159,7 @@
                                     <div class="position-relative">
                                         <label class="form-label" for="password">Confirm Password</label>
                                         <input tabindex="7" placeholder="Confirm your password" ref="confirm_password"
-                                            data-validation="required|minLen:8" type="password"
+                                            data-validation="required|minLen:8" :type="showConfirmPassword ? 'text' : 'password'"
                                             name="password_confirmation" data-validation-name="Confirm Password"
                                             class="form-control pe-5 password-input form-field" onpaste="return false"
                                             id="password_confirmation" aria-describedby="passwordConfirmation"
@@ -174,9 +176,11 @@
 
                                         <div class="auth-pass-inputgroup">
                                             <b-button variant="link" class="text-decoration-none text-medium-light p-0"
-                                                type="button">
-                                                <i ref="toggle_password_view_2"
-                                                    class="bx bx-show align-middle btn-spacing fw-400"></i>
+                                                @click="toggleConfirmPassword" type="button">
+                                                <span class="icon is-small is-right">
+                                                    <i class="bx"
+                                                        :class="{ 'bx-hide': showConfirmPassword, 'bx-show': !showConfirmPassword }"></i>
+                                                </span>
                                             </b-button>
                                         </div>
                                     </div>
@@ -248,24 +252,22 @@ import { useAppHelpers } from "@/composables/useAppHelpers";
 
 let formErrors = ref({});
 const helper = useAppHelpers();
-const toggle_password_view = ref(null);
-const toggle_password_view_2 = ref(null);
+
 const show_overlay = ref(false);
-// const phoneInput = ref(0);
-// console.log(phoneInput.querySelector('input'));
-// Get the inner input element
-// const inputElement = parentElement.querySelector('.vti__input');
+const showPassword = ref(false);
+const showConfirmPassword = ref(false);
 
-// Now you can use inputElement as needed
-// console.log(inputElement);
 
-if (toggle_password_view.value) {
-    console.log('bhjhjhgjhg',toggle_password_view.value);
-    helper.togglePassword(toggle_password_view.value);
+
+const togglePassword = () => {
+    showPassword.value = !showPassword.value;
 }
-if (toggle_password_view_2.value) {
-    helper.togglePassword(toggle_password_view_2.value);
+
+
+const toggleConfirmPassword = () => {
+    showConfirmPassword.value = !showConfirmPassword.value;
 }
+
 
 
 
@@ -278,7 +280,7 @@ if (toggle_password_view_2.value) {
     width: 550px;
 }
 
-.rounded{
+.rounded {
     border-radius: 5px;
 }
 </style>

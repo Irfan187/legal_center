@@ -89,7 +89,7 @@
 
             &.active {
                 
-                color:  #344054;
+                color:  var(--secondary-color);
                 background: #F2F4F7;
                 border-left: $vertical-menu-item-right-border solid $vertical-menu-item-active-color;
                 font-weight: 500; 

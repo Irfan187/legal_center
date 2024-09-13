@@ -44,7 +44,9 @@
     --icon-color: #1d2939;
     --text-color: #344054;
     // --primary-color: #073a65;
-    --primary-color:#2a6ea6;
+    --secondary-color:#4973b9;
+    --primary-color: #153753;
+    // --primary-color: #7f007f;
     --white-color: #ffffff;
     --header-menu-link-color: #344054;
     --hero-bg-color: #101828;
@@ -71,7 +73,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    // background-color: var(--body-color);
+    background-color: var(--body-color) !important;
     color: var(--text-color);
     // min-height: 100vh;
     font-family: 'Inter', sans-serif !important;
@@ -424,7 +426,7 @@ input.form-control.password-input {
 .signin-other-title {
     text-align: center;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
     color: $gray-500;
 
@@ -1537,7 +1539,7 @@ $fontColor: rgb(250, 250, 250);
         margin-left: 24px;
         margin-right: 22px !important;
         padding-right: 32px;
-        border-right: 1px solid #98A2B3 !important;
+        // border-right: 1px solid #98A2B3 !important;
     }
 
     .create_account {
@@ -1652,7 +1654,8 @@ $fontColor: rgb(250, 250, 250);
 
     .signin-google-btn {
         &:hover {
-            border: 2px solid var(--primary-color);
+            background-color: var(--primary-color) !important;
+            color: white;
         }
     }
 
@@ -1784,6 +1787,7 @@ $fontColor: rgb(250, 250, 250);
                 background-color: var(--primary-color);
                 font-size: 16px;
                 padding: 12px;
+                border: none;
             }
         }
     }
@@ -1865,7 +1869,7 @@ $fontColor: rgb(250, 250, 250);
         }
 
         li.active {
-            border: 1px solid #B3D64E;
+            border: 1px solid var(--primary-color);
             background-color: #FDFFF9;
         }
     }
@@ -1928,8 +1932,8 @@ p.d-flex.position-relative.align-items-center.justify-content-center.mb-0.gap-2 
             }
 
             .btn.active {
-                border: 1px solid #B3D64E;
-                color: #B3D64E;
+                border: 1px solid var(--primary-color);
+                color: var(--primary-color);
                 background-color: #FDFFF9;
 
                 path {
