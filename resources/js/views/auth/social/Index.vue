@@ -1,13 +1,13 @@
 <template>
     <div class="social-btn-col">
-        <div class="signin-other-title">
+        <div class="social-title">
             <h5 class="font-400">Or continue with social account</h5>
         </div>
 
         <!-- <button class="btn btn-indigo btn-md btn-icon" title="Facebook" type="button">
                 <div class="btn-content"><i class="bx bxl-facebook fs-16"></i></div>
             </button> -->
-        <div class="d-flex justify-content-between gap-10 ">
+        <div class="d-flex justify-content-between social-login-parent">
             <button class="btn bg-white py-3 fs-17 w-50 text-center signin-google-btn rounded" @click="socialLogin('google')" title="Google" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                 <path d="M21.0009 12.2001C21.0009 11.4601 20.9396 10.9201 20.807 10.3601H12.1846V13.7001H17.2457C17.1438 14.5301 16.5927 15.7801 15.3682 16.6201L15.351 16.7319L18.0773 18.8017L18.2661 18.8201C20.0008 17.2501 21.0009 14.9401 21.0009 12.2001Z" fill="#4285F4" />
@@ -43,7 +43,5 @@
 <style scoped>
 
 
-.rounded{
-    border-radius: 5px;
-}
+
 </style>

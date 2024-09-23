@@ -1,15 +1,14 @@
 // Fonts
-@import "fonts/fonts";
 
 
-@import "variables";
 @import "/node_modules/bootstrap/scss/bootstrap";
 
+
 // Override Bootstrap Variables
+@import "variables";
 
 
 // Theme Root Variables
-@import "theme";
 
 // Structure
 @import "structure/topbar";
@@ -18,13 +17,18 @@
 @import "structure/breadcrumb";
 
 // Extras
-@import "extras/simplebar";
-@import "extras/nav";
-@import "extras/dropdown";
-@import "extras/material";
+// @import "extras/simplebar";
+// @import "extras/nav";
+// @import "extras/dropdown";
+// @import "extras/material";
 
 // Icons
-@import "icons/icons";
+// @import "icons/icons";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+// Components css
+@import "components";
+
 
 // Custom Styles
 @import "custom";
