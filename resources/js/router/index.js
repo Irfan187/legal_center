@@ -6,10 +6,33 @@ const dashboard = () => import("@/views/dashboard.vue");
 const Login = () => import("@/views/auth/signin/Index.vue");
 const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
+const cards = () => import("@/views/components/pages/Card.vue");
+const alerts = () => import("@/views/components/pages/Alerts.vue");
+
 
 
 
 const routes = [
+    {
+        name: "cards",
+        path: "/cards",
+        component: cards,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
+    {
+        name: "alerts",
+        path: "/alerts",
+        component: alerts,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
     {
         name: "home",
         path: "/",

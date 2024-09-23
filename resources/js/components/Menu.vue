@@ -1,32 +1,32 @@
 <template>
     <b-container fluid class="d-flex flex-column justify-content-between">
 
-        <ul class="navbar-nav px-3" :class="{ mobile_sticky_footer: isActive }" id="navbar-nav">
+        <ul class="navbar-nav px-3" id="navbar-nav">
             <!-- <li class="menu-title d-flex justify-content-between">
                 <span> Menu</span>
             </li> -->
 
-            <li class="nav-item" v-if="authStore.user">
-                <router-link :to="{ name: 'dashboard' }" class="nav-link menu-link">
+            <li class="nav-item">
+                <router-link :to="{ name: 'cards' }" class="nav-link menu-link">
                     <i class="ri ri-apps-2-fill"></i>
-                    <span> Dashboard</span>
+                    <span> Cards</span>
+                </router-link>
+            </li>
+            <li class="nav-item">
+                <router-link :to="{ name: 'alerts' }" class="nav-link menu-link">
+                    <i class="ri ri-apps-2-fill"></i>
+                    <span> Alerts</span>
                 </router-link>
             </li>
 
             <!-- Admin Menu -->
-            
-            <li class="nav-item" v-if="authStore.userHasRole(['admin'])">
-                <router-link :to="{ name: 'designation_list' }" class="nav-link menu-link">
-                    <i class="fa fa-user-tie"></i>
-                    <span> Designations</span>
-                </router-link>
-            </li>
+
+
         </ul>
 
         <div class="sidebar-footer">
-        <p class="mb-1">legalcenter.com</p>
-        <span>© 2024 All Rights Reserved.</span>
-    </div>
+            
+        </div>
     </b-container>
 </template>
 
@@ -36,7 +36,6 @@ import { useNavMenuHelper } from "@/composables/useNavMenuHelper";
 import { onMounted, reactive, watch, ref } from "vue";
 import { useRoute } from "vue-router";
 import { useAuthStore } from "@/stores/auth-store";
-import Swal from 'sweetalert2';
 
 const isActive = ref(false);
 const authStore = useAuthStore();
@@ -118,23 +117,7 @@ onMounted(() => {
 });
 
 
-const submitLogoutAction = async () => {
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You want to logout account.",
-        showCancelButton: true,
-        confirmButtonText: 'Logout',
-        cancelButtonText: 'Cancel',
-        confirmButtonColor: '#153753',
-        cancelButtonColor: '#3085d6'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            authStore.processLogout();
-        }
-    })
 
-
-}
 const settings = reactive({
     minScrollbarLength: 60,
 });

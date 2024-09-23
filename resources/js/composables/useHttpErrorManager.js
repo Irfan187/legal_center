@@ -1,5 +1,4 @@
 import { useAuthStore } from "@/stores/auth-store";
-import { useToastManager } from "@/composables/useToastManager";
 import { useRouter } from 'vue-router'
 
 export function useHttpErrorManager() {
@@ -54,7 +53,6 @@ export function useHttpErrorManager() {
 
         if(displayToast){
             let temp_message = error_message+"\n"+message;
-            useToastManager().display(temp_message, "error");
         }
 
         if(err_404){

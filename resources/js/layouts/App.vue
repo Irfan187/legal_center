@@ -10,7 +10,7 @@
         </div>
 
         <div class="main-content">
-            <div class="page-content" style="background: var(--grey-20, #F2F4F7);">
+            <div class="page-content">
                 <b-container fluid>
                     <slot />
                 </b-container>
