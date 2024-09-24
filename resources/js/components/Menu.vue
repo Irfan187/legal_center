@@ -18,6 +18,12 @@
                     <span> Alerts</span>
                 </router-link>
             </li>
+            <li class="nav-item">
+                <router-link :to="{ name: 'input_elements' }" class="nav-link menu-link">
+                    <i class="ri ri-apps-2-fill"></i>
+                    <span> Input Elements</span>
+                </router-link>
+            </li>
 
             <!-- Admin Menu -->
 

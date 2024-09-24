@@ -6,8 +6,11 @@ const dashboard = () => import("@/views/dashboard.vue");
 const Login = () => import("@/views/auth/signin/Index.vue");
 const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
-const cards = () => import("@/views/components/pages/Card.vue");
+const cards = () => import("@/views/components/pages/Cards.vue");
 const alerts = () => import("@/views/components/pages/Alerts.vue");
+const input_elements = () => import("@/views/components/pages/InputElements.vue");
+
+
 
 
 
@@ -27,6 +30,16 @@ const routes = [
         name: "alerts",
         path: "/alerts",
         component: alerts,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
+    {
+        name: "input_elements",
+        path: "/input_elements",
+        component: input_elements,
         meta: {
             title: `Home Page`,
             authRequired: false,
