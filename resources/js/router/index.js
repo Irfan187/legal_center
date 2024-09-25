@@ -8,6 +8,7 @@ const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
 const cards = () => import("@/views/components/pages/Card.vue");
 const alerts = () => import("@/views/components/pages/Alerts.vue");
+const buttons = () => import("@/views/components/pages/Button.vue");
 
 
 
@@ -27,6 +28,16 @@ const routes = [
         name: "alerts",
         path: "/alerts",
         component: alerts,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
+    {
+        name: "button",
+        path: "/button",
+        component: buttons,
         meta: {
             title: `Home Page`,
             authRequired: false,

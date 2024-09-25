@@ -19,13 +19,20 @@
                 </router-link>
             </li>
 
+            <li class="nav-item">
+                <router-link :to="{ name: 'button' }" class="nav-link menu-link">
+                    <i class="ri ri-apps-2-fill"></i>
+                    <span> Buttons </span>
+                </router-link>
+            </li>
+
             <!-- Admin Menu -->
 
 
         </ul>
 
         <div class="sidebar-footer">
-            
+
         </div>
     </b-container>
 </template>
@@ -34,7 +41,7 @@
 
 import { useNavMenuHelper } from "@/composables/useNavMenuHelper";
 import { onMounted, reactive, watch, ref } from "vue";
-import { useRoute } from "vue-router";
+import { routerKey, useRoute } from "vue-router";
 import { useAuthStore } from "@/stores/auth-store";
 
 const isActive = ref(false);

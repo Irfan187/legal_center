@@ -1,7 +1,7 @@
 <template>
     <div :class="class" v-if="visible">
         <div v-if="icon">
-            
+
         </div>
         <div>
             <h3 v-if="heading" v-html="heading"></h3>

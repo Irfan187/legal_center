@@ -10,13 +10,12 @@
       </div>
     </Layout>
   </template>
-  
+
   <script setup>
   import Layout from "@/layouts/Index.vue";
   import { ref, onMounted } from 'vue';
-import Alert from "@/components/ui_elements/Alert.vue";
-  
+  import Alert from "@/components/ui_elements/Alert.vue";
+
   const message ="fkjgsdkjgfdkjshgkjfdghkg";
   // message (req), class, heading, icon, isClosable
   </script>
-  
