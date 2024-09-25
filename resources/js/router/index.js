@@ -6,9 +6,15 @@ const dashboard = () => import("@/views/dashboard.vue");
 const Login = () => import("@/views/auth/signin/Index.vue");
 const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
-const cards = () => import("@/views/components/pages/Card.vue");
+const cards = () => import("@/views/components/pages/Cards.vue");
 const alerts = () => import("@/views/components/pages/Alerts.vue");
+<<<<<<< HEAD
 const buttons = () => import("@/views/components/pages/Button.vue");
+=======
+const input_elements = () => import("@/views/components/pages/InputElements.vue");
+
+
+>>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77
 
 
 
@@ -35,9 +41,15 @@ const routes = [
         }
     },
     {
+<<<<<<< HEAD
         name: "button",
         path: "/button",
         component: buttons,
+=======
+        name: "input_elements",
+        path: "/input_elements",
+        component: input_elements,
+>>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77
         meta: {
             title: `Home Page`,
             authRequired: false,

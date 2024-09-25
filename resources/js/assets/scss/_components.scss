@@ -1,4 +1,3 @@
-
 // ===================================================================================================
 //                              Card Component
 // ===================================================================================================
@@ -7,6 +6,20 @@
     background-color: #f5f6f8;
     border-radius: 8px;
     padding: 16px 16px 16px 16px;
+
+    img{
+        width: 100%;
+    }
+    h4{
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .buttons{
+        margin: 10px 0px 10px 0px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -35,25 +48,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: white;
     }
 
-    .close {
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1rem;
-        opacity: 1;
-        text-shadow: none;
-        color: white;
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
     }
 
-    .dismissible-alert .close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 1rem 1.25rem;
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -64,9 +88,35 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
-
+    display: flex;
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -77,9 +127,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -90,9 +167,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -103,9 +207,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -116,9 +247,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -129,9 +287,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+    display: flex;
 
     a {
         color: $secondary;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
@@ -142,9 +327,36 @@ button.close {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
+    display: flex;
 
     a {
         color: white;
+    }
+
+    div {
+        margin-right: 10px;
+        /* Add some space between the icon and the text */
+    }
+
+    i {
+        font-size: 24px;
+        /* Example icon color */
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 18px;
+        /* Example heading color */
+    }
+
+    span {
+        display: block;
+        /* Example message color */
+    }
+
+    .close-icon{
+        font-size: 18px;
+        cursor: pointer;
     }
 }
 
