@@ -7,18 +7,41 @@
     border-radius: 8px;
     padding: 16px 16px 16px 16px;
 
-    img{
+    img {
         width: 100%;
     }
-    h4{
+
+    h4 {
         text-align: center;
-        margin: 10px 0px 10px 0px;
     }
 
-    .buttons{
+    .buttons {
         margin: 10px 0px 10px 0px;
         display: flex;
-        justify-content: center;
+        // justify-content: center;
+    }
+
+    .heading-icon {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            height: fit-content;
+
+            &:hover {
+                background: #b1b2b33d;
+                border-radius: 50%;
+                filter: invert(1);
+                color: black;
+            }
+        }
+
+        i {
+            cursor: pointer;
+            font-size: 25px;
+
+
+        }
     }
 }
 
@@ -26,29 +49,27 @@
 // ===================================================================================================
 //                              Alert Component
 // ===================================================================================================
-button.close {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
 
-.dismissible-alert {
-    padding-right: 4rem;
-}
-
-
-
-.primary-alert {
-    color: white;
-    border-color: #d6d7db;
-    background-color: $primary;
+.primary-alert,
+.secondary-alert,
+.info-alert,
+.danger-alert,
+.light-alert,
+.success-alert,
+.dark-alert,
+.warning-alert {
     padding: 1rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
     display: flex;
+    justify-content: space-between;
+    /* Align items left and right */
+    align-items: center;
+    /* Vertically center all items */
+
+    .icon_message_body {
+        display: flex;
+    }
 
     a {
         color: white;
@@ -72,296 +93,215 @@ button.close {
 
     span {
         display: block;
+        padding: 3px;
+
         /* Example message color */
+        &:hover {
+            background: #b1b2b33d;
+            border-radius: 50%;
+            filter: invert(1);
+            color: black;
+        }
     }
 
-    .close-icon{
+    .close-icon {
         font-size: 18px;
         cursor: pointer;
     }
+}
+
+.primary-alert {
+    color: white;
+    border-color: #d6d7db;
+    background-color: $primary;
 }
 
 .secondary-alert {
     color: white;
     border-color: #d6d7db;
     background-color: $secondary;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .success-alert {
     color: white;
     border-color: #d6d7db;
     background-color: $success;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
 
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .danger-alert {
     color: white;
     border-color: #d6d7db;
     background-color: $danger;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
-
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .warning-alert {
     color: white;
     border-color: #d6d7db;
     background-color: $warning;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
-
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .info-alert {
     color: white;
     border-color: #d6d7db;
     background-color: $info;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
-
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .light-alert {
     color: #616367;
     border-color: #ecedef;
     background-color: $light;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: flex;
-
-    a {
-        color: $secondary;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
 }
 
 .dark-alert {
     color: #edeef5;
     border-color: #cbcccf;
-    background-color: #24252c;
-    padding: 1rem 1.25rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    display: flex;
-
-    a {
-        color: white;
-    }
-
-    div {
-        margin-right: 10px;
-        /* Add some space between the icon and the text */
-    }
-
-    i {
-        font-size: 24px;
-        /* Example icon color */
-    }
-
-    h4 {
-        margin: 0;
-        font-size: 18px;
-        /* Example heading color */
-    }
-
-    span {
-        display: block;
-        /* Example message color */
-    }
-
-    .close-icon{
-        font-size: 18px;
-        cursor: pointer;
-    }
+    background-color: $dark;
 }
 
 
 // ===================================================================================================
+//                              Input Component
+// ===================================================================================================
+
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+    border: 2px solid $border-color !important;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    // Default radio button styles
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+
+    // Style for the inner dot (when radio is checked)
+    &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 7px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s ease;
+    }
+
+    &:checked {
+        border-color: $primary; // Border color when checked
+        background-color: $primary;
+
+        &::before {
+            background-color: #fff; // Inner dot color when checked
+        }
+    }
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: $primary;
+}
+
+input[type="checkbox"]:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: "\2713";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    &:checked::after {
+        opacity: 1;
+        color: $primary;
+    }
+
+    &:hover {
+        border-color: $primary;
+    }
+}
+
 //                              Button Component
 // ===================================================================================================
 /* Custom button styling */
@@ -401,32 +341,17 @@ button:disabled {
     border-color: $primary;
 }
 
-// .button-primary:hover {
-//     background-color: #0056b3;
-//     border-color: #004085;
-// }
-
 .button-secondary {
     background-color: $secondary;
     color: #fff;
     border-color: $secondary;
 }
 
-// .button-secondary:hover {
-//     background-color: #5a6268;
-//     border-color: #545b62;
-// }
-
 .button-success {
     background-color: $success;
     color: #fff;
     border-color: $success;
 }
-
-// .button-success:hover {
-//     background-color: #218838;
-//     border-color: #1e7e34;
-// }
 
 .button-danger {
     background-color: $danger;
@@ -454,7 +379,7 @@ button:disabled {
 
 .button-dark {
     background-color: $dark;
-    color: #000;
+    color: white;
     border-color: $dark;
 }
 
@@ -463,11 +388,11 @@ button:disabled {
     background-color: transparent;
     color: $primary;
     border-color: $primary;
-}
 
-.outline-primary:hover {
-    background-color: $primary;
-    color: #fff;
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+    }
 }
 
 .outline-secondary {
@@ -539,14 +464,15 @@ button:disabled {
 
 .outline-dark {
     background-color: transparent;
-    color: #000;
+    color: $dark;
     border-color: $dark;
+
+    &:hover {
+        background-color: $dark;
+        color: white;
+    }
 }
 
-.outline-dark:hover {
-    background-color: $dark;
-    color: #000;
-}
 
 /* Optional icon style */
 .icon {
@@ -555,7 +481,8 @@ button:disabled {
 
 /* Button group for spacing */
 .button-group {
-    gap: 0.5rem; /* Adds gap between the buttons */
+    gap: 0.5rem;
+    /* Adds gap between the buttons */
 }
 
 // ===================================================================================================
@@ -565,9 +492,9 @@ button:disabled {
 .custom-multiselect {
     position: relative;
     width: 100%;
-  }
+}
 
-  .select-box {
+.select-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -576,38 +503,38 @@ button:disabled {
     border-radius: 0.25rem;
     background-color: #fff;
     cursor: pointer;
-  }
+}
 
-  .selected-items {
+.selected-items {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-  }
+}
 
-  .selected-item {
+.selected-item {
     display: inline-flex;
     align-items: center;
     color: rgb(0, 0, 0);
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
-  }
+}
 
-  .cross-icon {
+.cross-icon {
     margin-left: 0.5rem;
     cursor: pointer;
     color: #060606;
     font-size: 1.2rem;
-  }
+}
 
-  .cross-icon:hover {
+.cross-icon:hover {
     color: #000000;
-  }
+}
 
-  .dropdown-icon {
+.dropdown-icon {
     font-size: 1rem;
-  }
+}
 
-  .dropdown {
+.dropdown {
     position: absolute;
     width: 100%;
     max-height: 200px;
@@ -617,9 +544,9 @@ button:disabled {
     background-color: #fff;
     z-index: 10;
     margin-top: 0.5rem;
-  }
+}
 
-  .dropdown-item {
+.dropdown-item {
     padding: 0.375rem 0.75rem;
     cursor: pointer;
     border-bottom: 1px solid #e9ecef;

@@ -1,5 +1,10 @@
 <template>
-    <input :class="class" :id="id" :type="type" :name="name" :value="value" :placeholder="placeholder"
+    <label class="switch" v-if="isToggle && type == 'checkbox'">
+        <input :class="class" :id="id" :type="type" :name="name" :value="value" :placeholder="placeholder"
+        :disabled="isDisabled" :readonly="isReadonly" :checked="isChecked">
+        <span class="slider round"></span>
+    </label>
+    <input v-else :class="class" :id="id" :type="type" :name="name" :value="value" :placeholder="placeholder"
         :disabled="isDisabled" :readonly="isReadonly" :checked="isChecked">
 </template>
 
@@ -16,6 +21,7 @@ const props = defineProps({
     value: { default: '', type: String },
     type: { default: 'text', type: String },
     class: { default: 'form-control', type: String },
+    isToggle: { default: false, type: Boolean },
 });
 
 
