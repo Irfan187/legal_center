@@ -53,6 +53,6 @@
   <script setup>
   import Layout from "@/layouts/Index.vue";
   import { ref } from 'vue';
-  import Button from "@/components/ui_elements/Button.vue";
+  import Button from "@/components/ui_elements/Buttons.vue";
 
   </script>

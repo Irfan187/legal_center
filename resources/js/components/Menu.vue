@@ -26,9 +26,16 @@
             </li>
 
             <li class="nav-item">
-                <router-link :to="{ name: 'button' }" class="nav-link menu-link">
+                <router-link :to="{ name: 'buttons' }" class="nav-link menu-link">
                     <i class="ri ri-apps-2-fill"></i>
                     <span> Buttons </span>
+                </router-link>
+            </li>
+
+            <li class="nav-item">
+                <router-link :to="{ name: 'selects' }" class="nav-link menu-link">
+                    <i class="ri ri-apps-2-fill"></i>
+                    <span> Selects </span>
                 </router-link>
             </li>
 

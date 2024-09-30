@@ -8,16 +8,9 @@ const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
 const cards = () => import("@/views/components/pages/Cards.vue");
 const alerts = () => import("@/views/components/pages/Alerts.vue");
-<<<<<<< HEAD
-const buttons = () => import("@/views/components/pages/Button.vue");
-=======
+const buttons = () => import("@/views/components/pages/Buttons.vue");
 const input_elements = () => import("@/views/components/pages/InputElements.vue");
-
-
->>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77
-
-
-
+const selects = () => import("@/views/components/pages/Selects.vue");
 
 const routes = [
     {
@@ -41,21 +34,38 @@ const routes = [
         }
     },
     {
-<<<<<<< HEAD
-        name: "button",
+        name: "buttons",
         path: "/button",
         component: buttons,
-=======
-        name: "input_elements",
-        path: "/input_elements",
-        component: input_elements,
->>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77
         meta: {
             title: `Home Page`,
             authRequired: false,
             isAuthLayout: false,
         }
     },
+    {
+        name: "input_elements",
+        path: "/input_elements",
+        component: input_elements,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
+
+    {
+        name: "selects",
+        path: "/select",
+        component: selects, // Another component for displaying the selected option
+        meta: {
+            title: 'Select Option Details',
+            authRequired: false,
+            isAuthLayout: false,
+        },
+    },
+
+
     {
         name: "home",
         path: "/",

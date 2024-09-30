@@ -36,19 +36,6 @@
             :isClosable="true" :visible="dark_visible" @close-alert="closeDarkAlert($event)"></Alert>
         </div>
       </div>
-<<<<<<< HEAD
-    </Layout>
-  </template>
-
-  <script setup>
-  import Layout from "@/layouts/Index.vue";
-  import { ref, onMounted } from 'vue';
-  import Alert from "@/components/ui_elements/Alert.vue";
-
-  const message ="fkjgsdkjgfdkjshgkjfdghkg";
-  // message (req), class, heading, icon, isClosable
-  </script>
-=======
     </div>
   </Layout>
 </template>
@@ -102,4 +89,3 @@ const closeLightAlert = (data) => {
 }
 
 </script>
->>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77

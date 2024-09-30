@@ -1,11 +1,7 @@
 <template>
     <div :class="class" v-if="visible" @hidden="$emit('closeAlert')">
         <div v-if="icon">
-<<<<<<< HEAD:resources/js/components/ui_elements/Alert.vue
-
-=======
             <i :class="icon"></i>
->>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77:resources/js/components/ui_elements/Alerts.vue
         </div>
         <div>
             <h4 v-if="heading" v-html="heading"></h4>
@@ -31,14 +27,10 @@ const props = defineProps({
 
 // click on isclosable button then visible set to false;
 
-<<<<<<< HEAD:resources/js/components/ui_elements/Alert.vue
-</script>
-=======
 const emit = defineEmits(['close-alert']);
 const closeAlert = () => {
     emit('close-alert', ['visible', false]);
 }
 
-// items,disable,class,  
+// items,disable,class,
 </script>
->>>>>>> 56e3214375c5df7259bfa325b99d61629c4adb77:resources/js/components/ui_elements/Alerts.vue
