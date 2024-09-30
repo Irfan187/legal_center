@@ -156,7 +156,7 @@
 .dark-alert {
     color: #edeef5;
     border-color: #cbcccf;
-    background-color: #24252c;
+    background-color: $dark;
 }
 
 
@@ -300,4 +300,254 @@ input[type="checkbox"] {
     &:hover {
         border-color: $primary;
     }
+}
+
+//                              Button Component
+// ===================================================================================================
+/* Custom button styling */
+.custom-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* Small button variant */
+.button-small {
+    padding: .25rem .5rem;
+    font-size: 0.875rem;
+}
+
+/* Disabled button */
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Button variants */
+.button-primary {
+    background-color: $primary;
+    color: #fff;
+    border-color: $primary;
+}
+
+.button-secondary {
+    background-color: $secondary;
+    color: #fff;
+    border-color: $secondary;
+}
+
+.button-success {
+    background-color: $success;
+    color: #fff;
+    border-color: $success;
+}
+
+.button-danger {
+    background-color: $danger;
+    color: #fff;
+    border-color: $danger;
+}
+
+.button-warning {
+    background-color: $warning;
+    color: #212529;
+    border-color: $warning;
+}
+
+.button-info {
+    background-color: $info;
+    color: #fff;
+    border-color: $info;
+}
+
+.button-light {
+    background-color: $light;
+    color: #212529;
+    border-color: $light;
+}
+
+.button-dark {
+    background-color: $dark;
+    color: #000;
+    border-color: $dark;
+}
+
+/* Outline button variants */
+.outline-primary {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+.outline-secondary {
+    background-color: transparent;
+    color: $secondary;
+    border-color: $secondary;
+}
+
+.outline-secondary:hover {
+    background-color: $secondary;
+    color: #fff;
+}
+
+.outline-success {
+    background-color: transparent;
+    color: $success;
+    border-color: $success;
+}
+
+.outline-success:hover {
+    background-color: $success;
+    color: #fff;
+}
+
+.outline-danger {
+    background-color: transparent;
+    color: $danger;
+    border-color: $danger;
+}
+
+.outline-danger:hover {
+    background-color: $danger;
+    color: #fff;
+}
+
+.outline-warning {
+    background-color: transparent;
+    color: $warning;
+    border-color: $warning;
+}
+
+.outline-warning:hover {
+    background-color: $warning;
+    color: #212529;
+}
+
+.outline-info {
+    background-color: transparent;
+    color: $info;
+    border-color: $info;
+}
+
+.outline-info:hover {
+    background-color: $info;
+    color: #fff;
+}
+
+.outline-light {
+    background-color: transparent;
+    color: #000;
+    border-color: $light;
+    border: 1px solid rgb(214, 212, 212);
+}
+
+.outline-light:hover {
+    background-color: $light;
+    color: #212529;
+}
+
+.outline-dark {
+    // background-color: transparent;
+    color: $dark;
+    border-color: $dark;
+
+    &:hover {
+        background-color: $dark;
+        color: white;
+    }
+}
+
+
+/* Optional icon style */
+.icon {
+    margin-right: 8px;
+}
+
+/* Button group for spacing */
+.button-group {
+    gap: 0.5rem;
+    /* Adds gap between the buttons */
+}
+
+// ===================================================================================================
+//                              Select Component
+// ===================================================================================================
+
+.custom-multiselect {
+    position: relative;
+    width: 100%;
+}
+
+.select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.selected-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.selected-item {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.cross-icon {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    color: #060606;
+    font-size: 1.2rem;
+}
+
+.cross-icon:hover {
+    color: #000000;
+}
+
+.dropdown-icon {
+    font-size: 1rem;
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    z-index: 10;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.375rem 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid #e9ecef;
 }

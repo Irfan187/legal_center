@@ -8,12 +8,9 @@ const Register = () => import("@/views/auth/signup/Index.vue");
 const DesignationList = () => import("@/views/designations/Index.vue");
 const cards = () => import("@/views/components/pages/Cards.vue");
 const alerts = () => import("@/views/components/pages/Alerts.vue");
+const buttons = () => import("@/views/components/pages/Buttons.vue");
 const input_elements = () => import("@/views/components/pages/InputElements.vue");
-
-
-
-
-
+const selects = () => import("@/views/components/pages/Selects.vue");
 
 const routes = [
     {
@@ -37,6 +34,16 @@ const routes = [
         }
     },
     {
+        name: "buttons",
+        path: "/button",
+        component: buttons,
+        meta: {
+            title: `Home Page`,
+            authRequired: false,
+            isAuthLayout: false,
+        }
+    },
+    {
         name: "input_elements",
         path: "/input_elements",
         component: input_elements,
@@ -46,6 +53,19 @@ const routes = [
             isAuthLayout: false,
         }
     },
+
+    {
+        name: "selects",
+        path: "/select",
+        component: selects, // Another component for displaying the selected option
+        meta: {
+            title: 'Select Option Details',
+            authRequired: false,
+            isAuthLayout: false,
+        },
+    },
+
+
     {
         name: "home",
         path: "/",
