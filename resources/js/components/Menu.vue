@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="d-flex flex-column justify-content-between">
+    <div class="d-flex flex-column justify-content-between container">
 
         <ul class="navbar-nav px-3" id="navbar-nav">
             <!-- <li class="menu-title d-flex justify-content-between">
@@ -33,7 +33,7 @@
         <div class="sidebar-footer">
             
         </div>
-    </b-container>
+    </div>
 </template>
 
 <script setup lang='js'>

@@ -29,14 +29,20 @@
                 </div>
                 <div class="col-lg-4 mb-3">
                     <h5>Checkbox Input</h5>
-                    <Input type="checkbox" class="" value="123456789" :isChecked="true"></Input>
+                    <Input type="checkbox" class="" value="123456789" :isChecked="false"></Input>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <h5>Radio Input</h5>
-                    <Input type="radio" name="input_radio" class="" value="123456789" :isChecked="false"></Input>
+                    <Input type="radio" name="input_radio" class="" value="123456789" :isChecked="true"></Input>&nbsp;&nbsp;
+                    <Input type="radio" name="input_radio" class="" value="123456789" :isChecked="false"></Input>&nbsp;&nbsp;
+                    <Input type="radio" name="input_radio" class="" value="123456789" :isChecked="false"></Input>&nbsp;&nbsp;
+                    <Input type="radio" name="input_radio" class="" value="123456789" :isChecked="false"></Input>&nbsp;&nbsp;
 
                 </div>
-                
+                <div class="col-lg-4 mb-3">
+                    <h5>Toogle Input Button</h5>
+                    <Input type="checkbox" class="" :isToggle="true"></Input>
+                </div>
             </div>
         </div>
     </Layout>
