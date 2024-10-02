@@ -64,7 +64,7 @@
             display: flex;
             align-items: center;
             padding: $vertical-menu-item-padding-y 8px;
-            color: $vertical-menu-item-color;
+            color: $primary;
             font-size: $vertical-menu-item-font-size;
             // font-family: $vertical-menu-item-font-family;
             font-weight: 500;
@@ -72,17 +72,20 @@
 
             &.active {
                 
-                color:  #344054;
-                background: #F2F4F7;
-                font-weight: 500; 
-                i {
-                    color: $vertical-menu-item-active-color
-                }
+                color:  $primary-light;
+                background: transparent;
             }
 
             &:hover {
                 // color: $vertical-menu-item-hover-color;
                 font-weight: 500;
+                color:  $primary;
+                background: $sidebar-link-hover-color;
+                font-weight: 500; 
+                border-radius: 6px;
+                i {
+                    color: $vertical-menu-item-active-color
+                }
             }
 
             i {

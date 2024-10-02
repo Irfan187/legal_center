@@ -1,6 +1,9 @@
 import './bootstrap';
 import '@/assets/scss/app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// Import Bootstrap JavaScript (includes Popper.js)
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createPinia } from 'pinia';
 // Import BootstrapVueNext components
 import { createApp } from 'vue';

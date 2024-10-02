@@ -46,6 +46,52 @@
 }
 
 
+.card-with-image {
+    background-color: #f5f6f8;
+    border-radius: 8px;
+    padding: 16px 16px 16px 16px;
+    min-height: 260px;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .buttons {
+        margin: 10px 0px 10px 0px;
+        display: flex;
+        // justify-content: center;
+    }
+
+    .heading-icon {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            height: fit-content;
+
+            &:hover {
+                background: #b1b2b33d;
+                border-radius: 50%;
+                filter: invert(1);
+                color: black;
+            }
+        }
+
+        i {
+            cursor: pointer;
+            font-size: 25px;
+
+
+        }
+    }
+}
+
+
 // ===================================================================================================
 //                              Alert Component
 // ===================================================================================================
@@ -287,6 +333,7 @@ input[type="checkbox"] {
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 16px;
+        font-weight: bold;
         color: #fff;
         opacity: 0;
         transition: opacity 0.2s ease;

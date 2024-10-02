@@ -8,36 +8,30 @@
 
             <li class="nav-item">
                 <router-link :to="{ name: 'cards' }" class="nav-link menu-link">
-                    <i class="ri ri-apps-2-fill"></i>
+                    <i class="bi bi-credit-card"></i>
                     <span> Cards</span>
                 </router-link>
             </li>
             <li class="nav-item">
                 <router-link :to="{ name: 'alerts' }" class="nav-link menu-link">
-                    <i class="ri ri-apps-2-fill"></i>
+                    <i class="bi bi-exclamation-triangle"></i>
                     <span> Alerts</span>
                 </router-link>
             </li>
             <li class="nav-item">
                 <router-link :to="{ name: 'input_elements' }" class="nav-link menu-link">
-                    <i class="ri ri-apps-2-fill"></i>
+                    <i class="bi bi-hdmi"></i>
                     <span> Input Elements</span>
                 </router-link>
             </li>
 
             <li class="nav-item">
                 <router-link :to="{ name: 'buttons' }" class="nav-link menu-link">
-                    <i class="ri ri-apps-2-fill"></i>
+                    <i class="bi bi-menu-button-wide"></i>
                     <span> Buttons </span>
                 </router-link>
             </li>
 
-            <li class="nav-item">
-                <router-link :to="{ name: 'selects' }" class="nav-link menu-link">
-                    <i class="ri ri-apps-2-fill"></i>
-                    <span> Selects </span>
-                </router-link>
-            </li>
 
             <!-- Admin Menu -->
 
