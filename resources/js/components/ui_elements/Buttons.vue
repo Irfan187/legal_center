@@ -1,6 +1,6 @@
 <template>
     <button
-      :class="['custom-button', sizeClass, buttonClass, outlineClass]"
+      :class="[ sizeClass, buttonClass, outlineClass]"
       :type="type"
       :disabled="disabled"
     >
