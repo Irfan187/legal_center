@@ -56,7 +56,7 @@ const routes = [
 
     {
         name: "selects",
-        path: "/select",
+        path: "/selects",
         component: selects, // Another component for displaying the selected option
         meta: {
             title: 'Select Option Details',

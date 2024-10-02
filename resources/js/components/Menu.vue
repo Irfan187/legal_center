@@ -32,6 +32,13 @@
                 </router-link>
             </li>
 
+            <li class="nav-item">
+                <router-link :to="{ name: 'selects' }" class="nav-link menu-link">
+                    <i class="bi bi-menu-button-wide"></i>
+                    <span> Selects </span>
+                </router-link>
+            </li>
+
 
             <!-- Admin Menu -->
 
