@@ -1,7 +1,7 @@
-
-
 <template>
-        <Menu></Menu>
+        <Menu>
+
+        </Menu>
 </template>
 
 <script setup lang='js'>

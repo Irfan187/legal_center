@@ -54,7 +54,7 @@
     bottom: 0;
     margin-top: 0;
     position: fixed;
-    top: $header-height;
+    top: 40px;
     box-shadow: $vertical-menu-box-shadow;
     padding: 10px 0 calc(#{$header-height}) 0;
     transition: all .1s ease-out;
@@ -71,7 +71,7 @@
             margin-bottom: 0.2rem;
 
             &.active {
-                
+
                 color:  $primary-light;
                 background: transparent;
             }
@@ -81,7 +81,7 @@
                 font-weight: 500;
                 color:  $primary;
                 background: $sidebar-link-hover-color;
-                font-weight: 500; 
+                font-weight: 500;
                 border-radius: 6px;
                 i {
                     color: $vertical-menu-item-active-color
@@ -222,6 +222,8 @@
         color: $text-muted;
         display: none;
     }
+
+
 }
 
 

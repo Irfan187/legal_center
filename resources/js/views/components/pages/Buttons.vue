@@ -34,8 +34,8 @@
         <!-- Outline Buttons Row -->
         <div class="row mb-4">
           <div class="col-lg-12 d-flex flex-wrap gap-2">
-            <Button class="outline-primary" outline>Primary Outline</Button>
-            <Button class="outline-secondary" outline>Primary Outline</Button>
+            <Button class="outline-primary" outline>Primary</Button>
+            <Button class="outline-secondary" outline>Secondary</Button>
             <Button class="outline-success" outline>Success</Button>
             <Button class="outline-danger" outline>Danger</Button>
             <Button class="outline-warning" outline>Warning</Button>

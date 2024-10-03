@@ -153,4 +153,6 @@ const toggleDropdown = () => {
 const filterOptions = () => {
     isOpen.value = true;
 };
+
+const buttons = document.getElementById(('mybutton'));
 </script>
